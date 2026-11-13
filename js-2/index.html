@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>turn to dark thems</title>
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .title-thems {
+        padding: 23px;
+        font-family:
+          "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-weight: 500;
+        align-items: center;
+      }
+      nav {
+        display: flex;
+        line-height: 1.6;
+        align-items: center;
+        padding: 0 34px;
+      }
+      nav li {
+        display: flex;
+        color: black;
+      }
+      li a {
+        list-style: none;
+        text-decoration: none;
+        color: rgb(225, 156, 52);
+      }
+      .dark {
+        background-color: rgb(0, 0, 0);
+        color: aliceblue;
+        transition: 2ms;
+      }
+    </style>
+    <div class="title-thems">
+      <nav>
+        <div class="lgo-holder">Rosr</div>
+        <li>
+          <ul>
+            <a href="#">Home</a>
+          </ul>
+          <ul>
+            <a href="#">Class</a>
+          </ul>
+          <ul>
+            <a href="#">Content</a>
+          </ul>
+          <ul>
+            <a href="#">About</a>
+          </ul>
+          <ul>
+            <a href="#" id="dark">Dark them</a>
+          </ul>
+        </li>
+      </nav>
+    </div>
+  </body>
+  <script>
+    document.getElementById("dark").addEventListener("click", function () {
+      document.body.classList.toggle("dark");
+    });
+  </script>
+</html>

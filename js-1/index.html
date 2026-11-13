@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cars</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-heading">
+        <h1>Counter</h1>
+        <h2 id="num">00</h2>
+        <button id="plus">+</button>
+        <button id="mins">-</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    let count = 0;
+    let num = document.getElementById("num");
+
+    document.getElementById("plus").addEventListener("click", function () {
+      count = count + 1;
+      num.textContent = count;
+    });
+    document.getElementById("mins").addEventListener("click", function () {
+      count = count - 1;
+      num.textContent = count;
+    });
+  </script>
+</html>

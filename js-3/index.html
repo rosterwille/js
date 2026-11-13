@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do App</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: blueviolet;
+    }
+    .holder {
+      background-color: blueviolet;
+      text-align: center;
+      padding: 12px;
+      border-right: 9px solid blue;
+      border-bottom: 9px solid blue;
+      border-radius: 12px;
+    }
+    h1 {
+      font-size: 4em;
+    }
+    input {
+      text-align: start;
+      margin: 9px;
+      border-radius: 4px;
+      color: black;
+      border: none;
+      padding: 5px;
+    }
+    button {
+      border-radius: 9px;
+      background-color: aqua;
+      transition: 2ms ease-in;
+      border: none;
+    }
+    button:hover {
+      background-color: rgb(32, 110, 110);
+    }
+    #list {
+      list-style: none;
+    }
+    @media (max-width: 720px) {
+      body {
+        background-color: antiquewhite;
+        height: 100vh;
+        width: 100vw;
+      }
+      .holder {
+        background-color: rgb(255, 255, 255);
+      }
+    }
+  </style>
+  <body>
+    <div class="holder">
+      <h1>To Do list</h1>
+      <input
+        type="text"
+        placeholder="Enter here task"
+        aria-label="Enter task"
+        id="text"
+      />
+      <button id="add">Add</button>
+      <ul id="list"></ul>
+    </div>
+    <script>
+      const text = document.querySelector("#text");
+      const btn = document.querySelector("#add");
+      const list = document.querySelector("#list");
+
+      btn.addEventListener("click", function () {
+        const task = text.value.trim();
+        if (task === "") return;
+        const li = document.createElement("li");
+        li.textContent = task;
+        list.appendChild(li);
+        text.value = "";
+      });
+    </script>
+  </body>
+</html>
